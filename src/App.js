@@ -3,7 +3,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // components
-import AddTodo from './components/todo/AddTodo';
+import TodoList from './components/todo/TodoList';
 import PrivateRoute from './routes/PrivateRoute';
 import SignIn from './components/auth/SignIn';
 
@@ -13,7 +13,7 @@ const App = () => {
       <h1>Redufito</h1>
       <Switch>
         <PrivateRoute path="/todos">
-          <AddTodo />
+          <TodoList />
         </PrivateRoute>
         <Route path="/">
           <SignIn />

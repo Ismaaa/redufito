@@ -22,7 +22,7 @@ const SignInWithGoogle = () => {
 
   return (
     <button
-      type="submit"
+      type="button"
       onClick={(e) => {
         handleSubmit(e);
       }}

@@ -8,18 +8,17 @@ const ToDoItem = ({ isDone, title, todoID }) => {
   const firestore = useFirestore();
   const { uid } = useSelector((state) => state.firebase.auth);
 
-  const handleChange = (event) => {
-    if (event.currentTarget.type === 'checkbox') {
-      setTodoItemDone(!isTodoItemDone);
-      firestore
-        .collection('users')
-        .doc(uid)
-        .collection('todos')
-        .doc(todoID)
-        .update({
-          isDone: !isTodoItemDone,
-        });
-    }
+  const handleChange = (e) => {
+    setTodoItemDone(e.target.checked);
+
+    firestore
+      .collection('users')
+      .doc(uid)
+      .collection('todos')
+      .doc(todoID)
+      .update({
+        isDone: e.target.checked,
+      });
   };
   return (
     <div

@@ -28,6 +28,7 @@ const Todos = () => {
         }}
       >
         {todos &&
+          //                    [Object key, values]
           Object.entries(todos).map(([id, todo]) => (
             <li key={id}>
               <ToDoItem id={id} title={todo.title} isDone={todo.isDone} />

@@ -15,6 +15,7 @@ const ToDoItem = ({ id, title, isDone }) => {
       isDone: e.target.checked,
     });
   };
+
   return (
     <div
       style={{
@@ -26,7 +27,7 @@ const ToDoItem = ({ id, title, isDone }) => {
         id={`todo_${id}`}
         type="checkbox"
         onChange={handleChange}
-        checked={isTodoItemDone}
+        checked={isDone}
       />
       <label htmlFor={`todo_${id}`}>{title}</label>
     </div>

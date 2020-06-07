@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
-
 // libs
 import React from 'react';
 import ReactDOM from 'react-dom';

@@ -23,11 +23,6 @@ const AddTodo = () => {
         title: todo,
         isDone: false,
       })
-      .then((docRef) => {
-        docRef.update({
-          todoID: docRef.id,
-        });
-      })
       .catch((error) => {
         console.warn(error);
       });
